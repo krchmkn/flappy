@@ -1,12 +1,11 @@
-use bracket_lib::prelude::*;
+use bracket_lib::prelude::{main_loop, BError, BTermBuilder};
 mod constants;
 mod game_mode;
+mod obstacle;
 mod player;
 mod state;
 
-use crate::state::*;
-
-// TODO: page 63
+use crate::state::State;
 
 fn main() -> BError {
     let context = BTermBuilder::simple80x50()

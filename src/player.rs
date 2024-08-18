@@ -1,9 +1,9 @@
-use bracket_lib::prelude::*;
+use bracket_lib::prelude::{to_cp437, BTerm, BLACK, GREEN};
 
 pub struct Player {
     pub x: i32,
     pub y: i32,
-    pub velocity: f32,
+    velocity: f32,
 }
 
 impl Player {
@@ -16,7 +16,7 @@ impl Player {
     }
 
     pub fn render(&mut self, ctx: &mut BTerm) {
-        ctx.set(0, self.y, YELLOW, BLACK, to_cp437('@'));
+        ctx.set(5, self.y, GREEN, BLACK, to_cp437('@'));
     }
 
     pub fn gravity_and_move(&mut self) {
